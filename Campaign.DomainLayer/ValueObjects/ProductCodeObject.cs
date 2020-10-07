@@ -27,7 +27,7 @@ namespace Campaign.DomainLayer.ValueObjects
 
         public override IEnumerable<object> GetEqualComponents()
         {
-            throw new NotImplementedException();
+            yield return Value;
         }
     }
 }
