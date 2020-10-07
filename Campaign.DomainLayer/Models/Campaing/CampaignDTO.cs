@@ -1,4 +1,4 @@
-﻿using Campaign.DomainLayer.Models.Product;
+﻿using Campaign.DomainLayer.Models.ProducObject;
 using Campaign.DomainLayer.ValueObjects;
 using System;
 using System.Collections.Generic;
