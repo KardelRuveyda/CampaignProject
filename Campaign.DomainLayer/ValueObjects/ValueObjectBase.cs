@@ -17,6 +17,7 @@ namespace Campaign.DomainLayer.ValueObjects
             if (obj == null)
             {
                 return false;
+
             }
 
             if(GetType() != obj.GetType())
