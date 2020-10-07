@@ -8,14 +8,15 @@ namespace Campaign.DomainLayer.ValueObjects
     {
         public string Value { get; set; }
 
-        public NameObject(string Name)
+        public NameObject(string name)
         {
-            if (string.IsNullOrEmpty(Name))
+            if (string.IsNullOrEmpty(name))
             {
                 Logger.Log("Name mustn't be empty");
+            }else
+            {
+                Value = name;
             }
-
-            Value = Name;
         }
         public override IEnumerable<object> GetEqualComponents()
         {
