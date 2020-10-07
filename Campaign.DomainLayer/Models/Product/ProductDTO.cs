@@ -41,7 +41,7 @@ namespace Campaign.DomainLayer.Models.ProducObject
             return result;
         }
 
-        public void MakeDiscount(double price)
+        public void GiveDiscount(double price)
         {
             if (HasCampaign())
             {
