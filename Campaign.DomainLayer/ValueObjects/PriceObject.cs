@@ -13,7 +13,7 @@ namespace Campaign.DomainLayer.ValueObjects
             SetPrice(price);
         }
 
-        private void SetPrice(double price)
+        public void SetPrice(double price)
         {
             if (price < 0)
             {
