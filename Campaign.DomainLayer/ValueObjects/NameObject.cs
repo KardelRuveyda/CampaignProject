@@ -4,7 +4,22 @@ using System.Text;
 
 namespace Campaign.DomainLayer.ValueObjects
 {
-    class NameObject
+    public class NameObject : ValueObjectBase
     {
+        public string Value { get; set; }
+
+        public NameObject(string Name)
+        {
+            if (string.IsNullOrEmpty(Name))
+            {
+                Logger.Log("Name mustn't be empty");
+            }
+
+            Value = Name;
+        }
+        public override IEnumerable<object> GetEqualComponents()
+        {
+            yield return Value;
+        }
     }
 }
