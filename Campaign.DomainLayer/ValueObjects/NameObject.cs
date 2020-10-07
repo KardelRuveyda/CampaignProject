@@ -10,10 +10,16 @@ namespace Campaign.DomainLayer.ValueObjects
 
         public NameObject(string name)
         {
+            SetName(name);
+        }
+
+        private void SetName(string name)
+        {
             if (string.IsNullOrEmpty(name))
             {
                 Logger.Log("Name mustn't be empty");
-            }else
+            }
+            else
             {
                 Value = name;
             }
