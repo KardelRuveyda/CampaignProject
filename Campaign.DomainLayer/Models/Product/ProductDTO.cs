@@ -22,6 +22,10 @@ namespace Campaign.DomainLayer.Models.ProducObject
         public PriceObject Price { get; set; }
         public CampaignDTO Campaign { get; set; }
         public StockObject Stock { get; set; }
+        public void SetCampaign(CampaignDTO campaign) {
+            Campaign = campaign;
+        } 
+
         public void SetPrice(double price)
         {
             Price = new PriceObject(price);
