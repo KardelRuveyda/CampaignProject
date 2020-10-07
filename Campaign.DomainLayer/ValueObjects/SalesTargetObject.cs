@@ -4,24 +4,24 @@ using System.Text;
 
 namespace Campaign.DomainLayer.ValueObjects
 {
-    public class DurationObject : ValueObjectBase
+    public class SalesTargetObject : ValueObjectBase
     {
         public int Value { get; set; }
 
-        public DurationObject(int hour)
+        public SalesTargetObject(int count)
         {
-            Increase(hour);
+            SetTargetClass(count);
         }
 
-        public void Increase(int hour)
+        public void SetTargetClass(int count)
         {
-            if (hour < 0)
+            if (count < 0)
             {
-                Logger.Log("Duration value is bigger than zero. ");
+                Logger.Log("Target sales count value must be greather than zero");
             }
             else
             {
-                Value += hour;
+                Value = count;
             }
         }
 
