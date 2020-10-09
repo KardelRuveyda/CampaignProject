@@ -103,7 +103,7 @@ namespace Campaign.AppLayer
 
             var product = _productService.GetProduct(productCode);
 
-            Logger.Log(String.Format("Product {0} info; price {1}, stock {2}", product.ProductCode, product.Price.Value, product.Stock.Value));
+            Logger.Log(String.Format("Product {0} info; price {1}, stock {2}",productCode, product.Price.Value, product.Stock.Value));
         }
 
         private void CreateProductCommand(string[] obj)

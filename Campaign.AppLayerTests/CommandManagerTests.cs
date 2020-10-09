@@ -42,7 +42,7 @@ namespace Campaing.AppLayerTests
         }
 
         [Fact]
-        public void GetProductInfoTest()
+        public void GetProductInfoTest()    
         {
             _command = GetManager();
             _command.Execute("create_product", new string[] { "P11", "100", "1000" });

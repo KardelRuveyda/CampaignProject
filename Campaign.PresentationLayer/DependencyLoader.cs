@@ -19,7 +19,6 @@ namespace Campaign.PresentationLayer
             serviceDescriptors.AddSingleton<IProductService, ProductService>();
             serviceDescriptors.AddSingleton<ICommandManager, CommandManager>();
             return serviceDescriptors.BuildServiceProvider();
-
         }
     }
 }
