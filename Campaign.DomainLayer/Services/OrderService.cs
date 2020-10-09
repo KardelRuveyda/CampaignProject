@@ -70,7 +70,7 @@ namespace Campaign.DomainLayer.Services
                 {
                     order.SetPriceSales(product.Price.Value);
                     OrderList.Add(order);
-                    Logger.Log(String.Format("Succesfully! Order created. Product Code :{0}, Quantity: {1}", product.ProductCode.Value, quantity));
+                    Logger.Log(String.Format("Succesfully! Order created. Order created; product {0}, quantity {1}", product.ProductCode.Value, quantity));
                 }
             }
         }
