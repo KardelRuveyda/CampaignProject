@@ -50,8 +50,7 @@ namespace Campaign.DomainLayer.Services
                 int salesTotal = _orderService.GetSalesCampaingTotal(campaign.Name.Value);
                 double avarageItemPrice = _orderService.GetItemPriceCampaignAvarage(campaign.Name.Value);
 
-                Logger.Log(String.Format("Campaign Info: {0}, " +
-                    "Status: {1}, Target Sales: {2}, Total Sales : {3}", campaign.Name.Value, campaign.GetStatusString(), campaign.Count.Value, salesTotal));
+                Logger.Log(String.Format("Campaign {0} info; Status {1}, Target Sales {2},Total Sales {3}, Turnover {4}, Average Item Price {5}", campaign.Name.Value, campaign.GetStatusString(), campaign.Count.Value, salesTotal, salesTotal * avarageItemPrice, salesTotal));
 
                 return campaign;
 
@@ -77,7 +76,7 @@ namespace Campaign.DomainLayer.Services
 
                     CampaignList.Add(campaign);
 
-                    Logger.Log(String.Format("Campaign created; name {0}, product {1}, duration {2},limit {3}, target sales count {4} ", campaign.Name.Value, product.ProductCode.Value, product.ProductCode.Value, campaign.Duration.Value, campaign.Limit.Value, campaign.Count.Value));
+                    Logger.Log(String.Format("Campaign created; name {0}, product {1}, duration {2},limit {3}, target sales count {4}", campaign.Name.Value, product.ProductCode.Value, campaign.Duration.Value,campaign.Limit.Value, campaign.Count.Value));
                 }
             }
             else
