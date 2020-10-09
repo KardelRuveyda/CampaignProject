@@ -72,7 +72,7 @@ namespace Campaign.DomainLayer.Services
             }else
             {
                 ProductList.Add(new ProductDTO(productCode, stock, price));
-                Logger.Log(String.Format("Product created; Product Code : {0} Stock: {1} Price : {2}",productCode,stock,price));
+                Logger.Log(String.Format("Product created; code {0}, price {1}, stock {2}", productCode,stock,price));
             }
         }
  

@@ -77,7 +77,7 @@ namespace Campaign.DomainLayer.Services
 
                     CampaignList.Add(campaign);
 
-                    Logger.Log(String.Format("Campaign created; Name: {0}, Product: {1}, Duration: {2}, Limit {3}, Target Sales Count {4}", campaign.Name.Value, product.ProductCode.Value, product.ProductCode.Value, campaign.Duration.Value, campaign.Limit.Value, campaign.Count.Value));
+                    Logger.Log(String.Format("Campaign created; name {0}, product {1}, duration {2},limit {3}, target sales count {4} ", campaign.Name.Value, product.ProductCode.Value, product.ProductCode.Value, campaign.Duration.Value, campaign.Limit.Value, campaign.Count.Value));
                 }
             }
             else

@@ -8,15 +8,16 @@ namespace Campaign.DomainLayer.Models.ProducObject
 {
     public class ProductDTO : Entity
     {
-        public ProductDTO(string ProductCode, int stock, double price)
+        public ProductDTO(string productCode, int stock, double price)
         {
             id = new Guid();
+            ProductCode = new ProductCodeObject(productCode);
             Stock = new StockObject(stock);
             RealPrice = new PriceObject(price);
             SetPrice(price);
         }
 
-        public ProductCodeObject ProductCode { get; set; }
+        public ProductCodeObject ProductCode { get; private set; }
         public PriceObject RealPrice { get; private set; }
 
         public PriceObject Price { get; set; }
