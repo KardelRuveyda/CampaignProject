@@ -23,8 +23,8 @@ namespace Campaing.AppLayerTests
             _campaignService = new CampaignService(_orderService);
             _productService = new ProductService();
             _orderService = new OrderService();
- 
-            return new CommandManager(_productService,_campaignService,_orderService);
+
+            return new CommandManager(_productService, _campaignService, _orderService);
         }
 
         [Fact]
